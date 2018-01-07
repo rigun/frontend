@@ -83,7 +83,7 @@
   display: inline-table;
   max-width: 650px !important;
   max-height: 120px !important;
-  left: 82.5%;
+  left: 83%;
   position: fixed !important; /* Required to override style inline style added by Flexslider */
   text-align: center;
   top: 93%;
@@ -98,7 +98,8 @@
 }
 .ct-sliderPop-slide3 {
   background: #4F4F99 none repeat scroll 0% 0%;
-}.sliderPop.flexslider:hover .flex-direction-nav .flex-prev
+}
+.sliderPop.flexslider:hover .flex-direction-nav .flex-prev
 
 .ct-sliderPop .inner .ct-sliderPop-close {
   display: inline-block;
