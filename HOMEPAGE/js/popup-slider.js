@@ -1,3 +1,4 @@
+
 $( document ).ready(function() {
 	$('#header').on('hover', function() {
 	  $('.sliderPop').show();
@@ -19,4 +20,8 @@ $( document ).ready(function() {
 	  $('.sliderPop').removeClass('flexslider');
 	  $('.sliderPop .ct-sliderPop-container').removeClass('slides');
 	});
+});
+
+$( document ).ready(function() {
+
 });
