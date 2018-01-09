@@ -464,7 +464,7 @@
   });
 </script>
 <script>
-  setTimeout(popups_open, 5000) 
+  setTimeout(popups_open, 5000)
   function popups_open() {
 	  $('.sliderPop').show();
 	  $('.ct-sliderPop-container').addClass('open');
@@ -473,11 +473,13 @@
 
 	  $('.sliderPop').flexslider({
 		selector: '.ct-sliderPop-container > .ct-sliderPop',
-		slideshow: false,
+		slideshow: true,
 		controlNav: false,
+    slideshowSpeed: 3000,
 		controlsContainer: '.ct-sliderPop-container'
 	  });
   };
+
 </script>
 
 <script>
