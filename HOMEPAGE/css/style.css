@@ -26,6 +26,9 @@ body, .sl-slide-inner
 
 
 /*...SLIDER.....................................................*/
+.demo-2{
+  max-height: 600px;
+}
 .sl-slider-wrapper {
 	width: 800px;
 	height: 400px;
@@ -150,7 +153,7 @@ body, .sl-slide-inner
   position: fixed;
   padding: 15px 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
 }
 .logo-box{
   position: relative;
@@ -267,6 +270,7 @@ p.flex-caption {
 /*...ACARA.....................................................*/
 .title_acara{
   text-align: center;
+  padding-top: 60px;
 }
 section#content-acara{
 height: auto;
@@ -329,7 +333,7 @@ img {
 
 /*Judul*/
 .title_timeline{
-  padding-top:30px;
+  padding-top:90px;
 }
 .title_timeline h1{
   text-align: center;
@@ -499,7 +503,7 @@ img {
 .left .tanggal{
   position: absolute;
   width: 210px;
-  top: 38px;
+  top: 40px;
   right: -310px;
   padding:5px 10px;
   margin:0px;
@@ -519,7 +523,7 @@ img {
 .right .tanggal{
   position: absolute;
   width: 210px;
-  top: 38px;
+  top: 40px;
   left: -310px;
   padding:5px 10px;
   margin:0px;
