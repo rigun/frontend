@@ -270,7 +270,7 @@ p.flex-caption {
 /*...ACARA.....................................................*/
 .title_acara{
   text-align: center;
-  padding-top: 60px;
+  padding-top: 85px;
 }
 section#content-acara{
 height: auto;
@@ -289,11 +289,11 @@ section#acara-bottom {
 .arrow-border {
 position: absolute;
 top: -49px;
-left: 84%;
+left: 79%;
 height: 0;
 width: 0;
 border: 25px solid transparent;
-border-bottom: 25px solid #bf3b2b;
+border-bottom: 25px solid var(--logo_color2);
 }
 .item-acara h4 {
   font-size: 16pt;
@@ -323,6 +323,35 @@ img {
 .img-acara img {
   height: 100%;
 }
+
+/*...ACARA.....................................................*/
+
+#acara-ifest{
+  color:white;
+  margin-bottom: 60px;
+}
+.acara-upper{
+  background-color: var(--bg_color2);
+  padding:1% 1% 2% 1%;
+  max-height: 225px;
+  max-width: 580px;
+  border-radius: 15px 15px 0px 0px;
+}
+.acara-lower{
+  background-color: var(--bg_color2);
+  padding:1% 2% 2% 2%;
+  max-height: 225px;
+  max-width: 960px;
+  border-radius: 15px 15px 0px 0px;
+}
+.multievent-ex{
+  background-color: var(--logo_color2);
+  padding:1% 1% 2% 1%;
+  max-height: 225px;
+  max-width: 960px;
+  border-radius: 0px 0px 15px 15px ;
+}
+
 
 /*...TIMELINE.....................................................*/
 
@@ -587,6 +616,7 @@ img {
   font-weight: bold;
   text-align: center;
   margin: 40px 0px;
+  color: white;
 }
 
 
