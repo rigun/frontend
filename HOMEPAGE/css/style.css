@@ -17,7 +17,8 @@ a {
 
 body, .sl-slide-inner
 {
-  background: url('../images/stardust.png') var(--bg_color1) fixed;
+  /*background: url('../images/stardust.png') var(--bg_color1) fixed;*/
+  background: var(--bg_color1) fixed;
 }
 
 #popup-iklan{
@@ -153,7 +154,7 @@ body, .sl-slide-inner
   position: fixed;
   padding: 15px 0;
   width: 100%;
-  z-index: 10;
+  z-index: 70;
 }
 .logo-box{
   position: relative;
@@ -164,7 +165,7 @@ body, .sl-slide-inner
   width:105px;
   height:60px;
 }
-.logo-content img {
+#header .logo-content img {
     min-width: 100%;
 }
 ul.navbar-box{
@@ -183,15 +184,14 @@ li.item-nav{
 
 
 /*...LOGO IFEST.....................................................*/
-#header_logo{
+.header-logo{
   position: relative;
   background: transparent;
   color: #fff;
   padding-top: 85px;
 }
-
 .logo-ifest{
-  height: 580px;
+  height: 500px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -201,14 +201,8 @@ li.item-nav{
     margin: 0 auto;
 }
 .logo-content img{
-    height: 100%;
-}
-.logo-ifest h1
-{
-  text-align: center;
-}
-.text{
-  width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 /*...CONTENT ABOUT.....................................................*/
@@ -322,6 +316,7 @@ img {
 }
 .img-acara img {
   height: 100%;
+  max-width: 100%;
 }
 
 /*...ACARA.....................................................*/
@@ -528,6 +523,11 @@ img {
   padding-right: 20px;
 }
 
+/*Text for left one*/
+.right .content p, .right .content h2{
+  padding-left: 20px;
+}
+
 /*Tanggal*/
 .left .tanggal{
   position: absolute;
@@ -541,11 +541,6 @@ img {
   white-space: nowrap ;
   background-color: var(--bg_color1);
   border:4px solid var(--pnc_color);
-}
-
-/*Text for left one*/
-.right .content p,.right .content h2{
-  padding-left: 20px;
 }
 
 /*Tanggal*/
@@ -630,7 +625,7 @@ input[type="text"], textarea , input[type="email"] {
 #contact-us .icon{
   width: 38px;
   height: 38px;
-  float:left;
+  float: left;
   background-color: #FF9F55;
   font-size: 30px;
   color: var(--logo_color4);
@@ -645,6 +640,7 @@ input[type="text"], textarea , input[type="email"] {
 
 #contact-us .form label{
   color: white;
+
 }
 
 
@@ -689,35 +685,179 @@ input[type="text"], textarea , input[type="email"] {
 }
 
 
+
+/* Larger than Desktop HD */
+@media only screen and (max-width: 1280px) {
+  .ct-sliderPop-container {
+    left: 74% !important;
+    top: 89% !important;
+  }
+}
+/* Larger than desktop */
+@media only screen and (max-width: 1000px) {
+  .ct-sliderPop-container {
+    left: 50% !important;
+    top: 90% !important;
+  }
+  .box-contact h3{
+    font-size: 90%;
+  }
+
+  .box-contact li{
+    font-size: 90%;
+  }
+}
+/* Larger than tablet */
+@media only screen and (max-width: 850px) {
+  input[type="text"], textarea , input[type="email"] {
+      width: 85%;
+  }
+
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media all and (max-width: 600px) {
+
+  /*TIMELINE--------------------------------------------------------------*/
   /* Place the timelime to the left */
   .timeline::after {
     left: 31px;
   }
 
   /* Full-width containers */
-#timeline-ifest   .container {
+#timeline-ifest .timeline .container {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
 
-  /* Make sure that all arrows are pointing leftwards */
-#timeline-ifest   .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+  /* Make disable arrow*/
+  #timeline-ifest .left .content::after ,#timeline-ifest .right .content::after{
+    display: none;
+  }
+
+  /*disable circle*/
+  #timeline-ifest .timeline .left::before , .right::before{
+    display: none;
   }
 
   /* Make sure all circles are at the same spot */
   .left::after, .right::after {
-    left: 15px;
+    left: 0px;
   }
 
   /* Make all right containers behave like the left ones */
-  .right {
+  .right, .left {
     left: 0%;
   }
+
+  /*make logo at same spot*/
+  .timeline .right .logo_acara img,.timeline .left .logo_acara img{
+    left:15px;
+    right: 0px;
+
+  }
+
+  /*make text at same position*/
+  .right .content p, .left .content p, .right .content h2 , .left .content h2{
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+  .right .content h2 , .left .content h2{
+    padding-top:20px;
+  }
+  .left .content, .right .content{
+     top:50px;
+  }
+
+  /*made date at same spot*/
+  .right .tanggal, .left .tanggal{
+    left:90px;
+    right: 0px;
+  }
+
+  /*CONTACT PERSON--------------------------------------------------------------*/
+  input[type="text"], textarea , input[type="email"] {
+      width: 80%;
+  }
+  #contact-us{
+    padding-top:40px;
+  }
+
+  /*ACARA-------------------------------------------------------------*/
+  .acara-lower{
+    border-radius: 0px;
+  }
+  .arrow-border {
+    top: -35px;
+    left: 78%;
+    border: 20px solid transparent;
+    border-bottom: 15px solid var(--logo_color2);
+  }
+
+  /*LOGO IFEST------------------------------------------------------------*/
+  .logo-ifest{
+    height: 400px;
+  }
+  .logo-content {
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  /*HEADER---------------------------------------------------------------*/
+  li.item-nav{
+    padding: 10px 10px;
+  }
+
+  /*ABOUT-IFEST---------------------------------------------------------------*/
+  #content-about .six.columns, #content-about .five.columns{
+    width: 100%;
+  }
+  #content-about{
+    padding-top: 80px;
+  }
+
+  #content-about .logo_ifest_asli{
+    left: 14%;
+  }
+
+  #content-about .title{
+    text-align: center;
+  }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+  /*CONTACT PERSON--------------------------------------------------------------*/
+  input[type="text"], textarea , input[type="email"] {
+      width: 83%;
+  }
+  .box-contact h3{
+    font-size: 3.6rem;
+  }
+
+  .box-contact li{
+    font-size: 20px;
+  }
+
+  /*HEADER---------------------------------------------*/
+  .btn-scroll-container{
+      display: none;
+  }
+  /*ACARA IFEST-------------------------------------------*/
+  .acara-upper, .acara-lower{
+    max-height: 100%;
+  }
+  .arrow-border{
+    left: 44%;
+  }
+  #acara-ifest .multievent-event{
+    width: 50%;
+  }
+  /*ABOUT-IFEST---------------------------------------------------------------*/
+  #content-about{
+    padding-top: 10px;
+  }
+
 }
