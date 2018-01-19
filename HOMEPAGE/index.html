@@ -37,7 +37,10 @@
   <script src="js/popup-slider.js"></script>
   <script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
   <script type="text/javascript" src="js/jquery.slitslider.js"></script>
-
+  <script src="js/scrollreveal.min.js"></script>
+  <script>
+        window.sr = ScrollReveal();
+  </script>
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -96,7 +99,7 @@
               <div class="container">
                   <div class="logo-ifest">
                     <div class="logo-content">
-                      <img src="images\Logo-IFEST-2018.png">
+                      <img class="Logo-IFEST-2018"src="images\Logo-IFEST-2018.png">
                     </div>
                   </div>
               </div>
@@ -155,7 +158,7 @@
     <div class="container">
       <div class="row">
         <div class="six columns">
-            <img class=logo_ifest_asli src="images\IFEST_2018.png" alt="">
+            <img class="logo_ifest_asli" src="images\IFEST_2018.png" alt="">
         </div>
         <div class="five columns">
           <div class="box-content">
@@ -233,7 +236,6 @@
           </div>
         </div>
       </div>
-
       <div class="container multievent-ex">
         <div class="arrow-border"></div>
         <div class="row">
@@ -464,108 +466,126 @@
 
 
 
-<script type="text/javascript">
-  $(function() {
-
-    var Page = (function() {
-
-      var $navArrows = $( '#nav-arrows' ),
-        slitslider = $( '#slider' ).slitslider( {} ),
-
-        init = function() {
-
-          initEvents();
-
-        },
-        initEvents = function() {
-
-          // add navigation events
-          $navArrows.children( ':last' ).on( 'click', function() {
-
-            slitslider.next();
-            return false;
-
-          } );
-
-          $navArrows.children( ':first' ).on( 'click', function() {
-
-            slitslider.previous();
-            return false;
-
-          } );
-
-        };
-
-        return { init : init };
-
-    })();
-
-    Page.init();
-
-  });
-</script>
-<script>
-  setTimeout(popups_open, 5000)
-  function popups_open() {
-	  $('.sliderPop').show();
-	  $('.ct-sliderPop-container').addClass('open');
-	  $('.sliderPop').addClass('flexslider');
-	  $('.sliderPop .ct-sliderPop-container').addClass('slides');
-
-	  $('.sliderPop').flexslider({
-		selector: '.ct-sliderPop-container > .ct-sliderPop',
-		slideshow: true,
-		controlNav: false,
-    slideshowSpeed: 3000,
-		controlsContainer: '.ct-sliderPop-container'
-	  });
-  };
-
-</script>
-
-<script>
-  function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var myLatLng = {lat: -7.779355,lng: 110.415776};
-  var mapOptions = {
-    center: new google.maps.LatLng(-7.779355, 110.415776,17), zoom: 17
-  };
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({position:myLatLng,map: map,});
-  }
-</script>
-
-<script>
-$(document).ready(function(){
-
-  // Add smooth scrolling to all links
-  $(".btn_scroll").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html,body').animate({
-        scrollTop: $(hash).offset().top
-      }, 600, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-
-
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript">
+    $(function() {
+
+      var Page = (function() {
+
+        var $navArrows = $( '#nav-arrows' ),
+          slitslider = $( '#slider' ).slitslider( {} ),
+
+          init = function() {
+
+            initEvents();
+
+          },
+          initEvents = function() {
+
+            // add navigation events
+            $navArrows.children( ':last' ).on( 'click', function() {
+
+              slitslider.next();
+              return false;
+
+            } );
+
+            $navArrows.children( ':first' ).on( 'click', function() {
+
+              slitslider.previous();
+              return false;
+
+            } );
+
+          };
+
+          return { init : init };
+
+      })();
+
+      Page.init();
+
+    });
+  </script>
+  <script>
+    setTimeout(popups_open, 5000)
+    function popups_open() {
+  	  $('.sliderPop').show();
+  	  $('.ct-sliderPop-container').addClass('open');
+  	  $('.sliderPop').addClass('flexslider');
+  	  $('.sliderPop .ct-sliderPop-container').addClass('slides');
+
+  	  $('.sliderPop').flexslider({
+  		selector: '.ct-sliderPop-container > .ct-sliderPop',
+  		slideshow: true,
+  		controlNav: false,
+      slideshowSpeed: 3000,
+  		controlsContainer: '.ct-sliderPop-container'
+  	  });
+    };
+
+  </script>
+  <script>
+    function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var myLatLng = {lat: -7.779355,lng: 110.415776};
+    var mapOptions = {
+      center: new google.maps.LatLng(-7.779355, 110.415776,17), zoom: 17
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({position:myLatLng,map: map,});
+    }
+  </script>
+  <script>
+    $(document).ready(function(){
+      var popup_cmd = 0
+      // Add smooth scrolling to all links
+      $(".btn_scroll").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html,body').animate({
+            scrollTop: $(hash).offset().top
+          }, 600, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+  <script>
+      sr.reveal('.logo-content', { duration: 1000 });
+      sr.reveal('#content-about', { duration: 100 });
+        sr.reveal('.logo_ifest_asli', { duration: 1000 });
+        sr.reveal('.item-box', { duration: 1000 });
+      sr.reveal('#acara-ifest', { duration: 100 });
+        sr.reveal('.title_acara', { duration: 1000 });
+        sr.reveal('.acara-upper', { duration: 300 });
+        sr.reveal('.acara-lower', { duration: 300 });
+        sr.reveal('.multievent-ex', { duration: 300 });
+        sr.reveal('.item-acara', { duration: 1000 });
+      sr.reveal('#timeline-ifest .tanggal , #timeline-ifest .content , #timeline-ifest .title_timeline',{ duration: 1000 });
+      sr.reveal('#sponsorship',100);
+        sr.reveal('.title_sponsor',1000);
+
+      sr.reveal('#contact-us',100);
+        sr.reveal('.title-cp',1000);
+        sr.reveal('.form',1000);
+        sr.reveal('.box-cp',1000);
+        sr.reveal('.box-sosmed',1000);
+
+  </script>
 </body>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4m3960a0NxbUHCNND05Us9fwb0MSJvoI&callback=myMap"></script>
 </html>
