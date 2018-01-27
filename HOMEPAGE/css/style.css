@@ -28,7 +28,7 @@ body, .sl-slide-inner
 
 
 /*...SLIDER.....................................................*/
-.demo-2{
+#slider-ifest{
   max-height: 600px;
 }
 .sl-slider-wrapper {
@@ -148,7 +148,7 @@ body, .sl-slide-inner
 */
 
 #slider .slide-content{
-  height: 70%;
+  height: auto;
   max-height: 460px;
   border: 4px solid var(--pnc_color);
 }
@@ -158,23 +158,31 @@ body, .sl-slide-inner
   padding: 30px 0px 0px 0px!important;
   margin-left: 4%;
   text-align: center;
-  font-size: 30px;
+  font-size: 30px !important;
 
 }
 #slider .highlight{
   background-color: var(--ifoc_color);
 }
 
+.content-inner .img-content{
+  height: 100% !important;
+}
 .content-inner img{
   position: relative;
-  left:15%;
-  max-height: 50% !important;
+   left:15%;
+  padding: 70px 0;
+  max-height: 100% !important;
   max-width: 210px;
+
 }
 
 #slider .content-inner{
-  height: 50%;
+  position: relative;
+  height: auto;
   width: auto;
+  text-align: center;
+  padding: 70px 0;
 }
 
 
@@ -729,6 +737,12 @@ input[type="text"], textarea , input[type="email"] {
 }
 /* Larger than desktop */
 @media only screen and (max-width: 1000px) {
+  #slider p{
+    font-size: 80%;
+  }
+  #slider h2{
+    font-size: 60px;
+  }
   .ct-sliderPop-container {
     left: 50% !important;
     top: 90% !important;
@@ -743,15 +757,34 @@ input[type="text"], textarea , input[type="email"] {
 }
 /* Larger than tablet */
 @media only screen and (max-width: 850px) {
+  #slider p{
+    font-size: 70%;
+  }
+  #slider h2{
+    font-size: 50px;
+  }
+  .content-inner img{
+    max-width: 150px;
+  }
   input[type="text"], textarea , input[type="email"] {
       width: 85%;
   }
+
 
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media all and (max-width: 600px) {
-
+  /*SLIDER------------------------------------------------------------------*/
+  #slider p{
+    font-size: 60%;
+  }
+  #slider h2{
+    font-size: 40px;
+  }
+  .content-inner img{
+    max-width: 150px;
+  }
   /*TIMELINE--------------------------------------------------------------*/
   /* Place the timelime to the left */
   .timeline::after {
@@ -863,6 +896,30 @@ input[type="text"], textarea , input[type="email"] {
 }
 
 @media only screen and (max-width: 500px) {
+  /*SLIDER------------------------------------------------------------------*/
+  #slider .text-content {
+    padding: 10px 30px 10px 30px !important;
+  }
+  #slider p{
+    font-size: 65%;
+  }
+  #slider h2{
+    font-size: 30px;
+  }
+  #slider .content-inner{
+    padding: 20px 0;
+  }
+  .content-inner .img-content{
+    width: 100%;
+    left: 0;
+  }
+  .content-inner img{
+    padding: 0px 0;
+    left: 0;
+  }
+  #slider-ifest .sl-slider blockquote {
+  	padding-bottom: 5px !important;
+  }
   /*CONTACT PERSON--------------------------------------------------------------*/
   input[type="text"], textarea , input[type="email"] {
       width: 83%;
