@@ -43,7 +43,7 @@
   </script>
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon(1).ico">
 
 </head>
 <body>
@@ -61,27 +61,29 @@
         </div>
         <div class="ten columns btn-scroll-container">
           <div class="navbar">
-            <ul class="navbar-box">
+            <ul id="navbar-id" class="navbar-box">
+              <a href="javascript:void(0);" class="res-btn-nav" onclick="Responsive_btn_nav()">&#9776;</a>
               <li class="item-nav">
-                <a class="btn_scroll" href="#content-about">
+                <a class="btn_scroll" onclick="Responsive_btn_nav()" href="#content-about">
                   Beranda
                 </a>
               </li>
               <li class="item-nav">
-                <a class="btn_scroll" href="#acara-ifest">
+                <a class="btn_scroll" onclick="Responsive_btn_nav()"  href="#acara-ifest">
                   Acara
                 </a>
               </li>
               <li class="item-nav">
-                <a class="btn_scroll" href="#timeline-ifest">
+                <a class="btn_scroll" onclick="Responsive_btn_nav()" href="#timeline-ifest">
                   Jadwal
                 </a>
               </li>
               <li class="item-nav">
-                <a class="btn_scroll" href="#contact-us">
+                <a class="btn_scroll" onclick="Responsive_btn_nav()" href="#contact-us">
                   Kontak Kami
                 </a>
               </li>
+
             </ul>
           </div>
         </div>
@@ -106,6 +108,7 @@
             </div>
           </div>
         </div>
+
         <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
           <div class="sl-slide-inner">
             <h2>New Event Has Arrived</h2>
@@ -114,7 +117,7 @@
                 <div class="four columns img-content"><img src="images\IFOC.png"></div>
                 <div class="eight columns">
                   <blockquote class="text-content"><p class="highlight">Informatics Festival Overclock Workshop</p></blockquote>
-                  <blockquote class="text-content"><p class="highlight">Informatics Festival Overclock Contest</p></blockquote>
+                  <blockquote class="text-content"><p class="highlight">Informatics Festival Overclock Competition</p></blockquote>
                 </div>
               </div>
             </div>
@@ -125,21 +128,27 @@
         <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
           <div class="sl-slide-inner">
             <h2>NEWS</h2>
+            <div class="container">
+              <div class="content-inner">
+                <div class="img-content-only"><img src="images\COMINGSOONIFEST.png"></div>
+              </div>
+            </div>
             <!--<blockquote><p>Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the abattoirs.</p><cite>Dame Jane Morris Goodall</cite></blockquote>-->
           </div>
         </div>
+
         <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
           <div class="sl-slide-inner">
             <h2>NEWS</h2>
-            <!--<blockquote><p>The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.</p><cite>Michael Klaper M.D.</cite></blockquote>-->
+            <div class="container">
+              <div class="content-inner">
+                <div class="img-content-only"><img src="images\COMINGSOONIFEST.png"></div>
+              </div>
+            </div>
+            <!--<blockquote><p>Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the abattoirs.</p><cite>Dame Jane Morris Goodall</cite></blockquote>-->
           </div>
         </div>
-        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
-          <div class="sl-slide-inner">
-            <h2>NEWS</h2>
-            <!--<blockquote><p>I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.</p><cite>Margi Clarke</cite></blockquote>-->
-          </div>
-        </div>
+
 
       </div><!-- /sl-slider -->
 
@@ -179,7 +188,7 @@
         <div class="row">
           <div class="twelve columns">
             <div class="item-acara">
-              <a href="http://ifest-uajy.com/hackfest">
+              <a href="http://ifest-uajy.com/ifoc">
                 <div class="img-acara">
                   <img src="images\IFOC.png">
                 </div>
@@ -262,7 +271,7 @@
           <h2>I2C</h2>
           <p>I2C adalah Informatics Innovative Contest. Di I2C sendiri dibagi menjadi 2 jenis perlombaan untuk diikuti, yaitu Trailer dan Ide Aplikasi. Lomba pembuatan trailer yang diperuntukkan seluruh mahasiswa Universitas Atma Jaya Yogyakarta. dan Ide Aplikasi yang di perlombakan untuk seluruh siswa SMA/SMK sederajat se-Indonesia(Nasional). </p>
         </div>
-          <h5 class="tanggal">7 April 2018</h5>
+          <h5 class="tanggal">8 Februari 2018</h5>
         <div class="logo_acara">
           <img class="icon-2-1"src="images\I2C.png">
         </div>
@@ -454,8 +463,23 @@
 
 
 
+
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script>
+   function Responsive_btn_nav() {
+
+    var x = document.getElementById("navbar-id");
+    if (x.className === "navbar-box") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar-box";
+    }
+  }
+
+  </script>
+
   <script type="text/javascript">
     $(function() {
 
@@ -563,7 +587,7 @@
         sr.reveal('.acara-lower', { duration: 300 });
         sr.reveal('.multievent-ex', { duration: 300 });
         sr.reveal('.item-acara', { duration: 1000 });
-      sr.reveal('#timeline-ifest .tanggal , #timeline-ifest .content , #timeline-ifest .title_timeline',{ duration: 1000 });
+      sr.reveal('#timeline-ifest .tanggal , #timeline-ifest .content , #timeline-ifest .title_timeline',{ duration: 600 });
       sr.reveal('#sponsorship',100);
         sr.reveal('.title_sponsor',1000);
 
