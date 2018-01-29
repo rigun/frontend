@@ -19,6 +19,7 @@ a {
 body, .sl-slide-inner
 {
   background: url('../images/BG3.png') var(--bg_color1) fixed;
+  background-size: cover;
   /* background: var(--bg_color1) fixed; */
 }
 
