@@ -1061,7 +1061,13 @@ input[type="text"], textarea , input[type="email"] {
     margin-top:20px;
     border-radius: 25px;
   }
-
+  /*Pop Up Iklan-----------------------------*/
+  #popup-iklan .ct-sliderPop-container {
+    width:80% !important;
+  }
+  #popup-iklan .ct-sliderPop{
+    width:100% !important;
+  }
 
   /*HEADER---------------------------------------------*/
 
@@ -1079,5 +1085,20 @@ input[type="text"], textarea , input[type="email"] {
   #content-about{
     padding-top: 10px;
   }
+
+}
+@media all and (max-width: 435px) {
+  /*Header------------------------------------*/
+  .btn-scroll-container{
+    width: 60% !important;
+    float: right;
+  }
+  .left .tanggal{
+    width: 40%;
+  }
+  .right .tanggal{
+    width: 40 %;
+  }
+
 
 }
