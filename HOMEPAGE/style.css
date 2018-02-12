@@ -213,20 +213,13 @@ body, .sl-slide-inner
   width: 100%;
   z-index: 70;
 }
-#header .one.columns{
-  margin-left: 0% !important;
-}
-.TF25{
-  position: absolute;
-  left: 125px;
-}
 .logo-box{
   position: relative;
   text-align: center;
   height: 52px;
 }
 #logo{
-  width:auto;
+  width:105px;
   height:60px;
 }
 #header .logo-content img {
@@ -1087,7 +1080,7 @@ input[type="text"], textarea , input[type="email"] {
     margin-top:20px;
     border-radius: 25px;
   }
-
+  
   /*Pop Up Iklan-----------------------------*/
   #popup-iklan .ct-sliderPop-container {
     width:80% !important;
@@ -1101,7 +1094,7 @@ input[type="text"], textarea , input[type="email"] {
   /*ACARA IFEST-------------------------------------------*/
   .acara-upper, .acara-lower{
     max-height: 100%;
-
+    
   }
 
 
