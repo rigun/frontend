@@ -187,7 +187,8 @@ body, .sl-slide-inner
 .content-inner img{
   position: relative;
    left:15%;
-  padding: 70px 0;
+  padding-top:30px;
+  padding-bottom: 5px;
   max-height: 100% !important;
   max-width: 210px;
 }
